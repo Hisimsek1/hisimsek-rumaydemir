@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisimsek & Rumaydemir</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hisimsek & Rumaydemir</h1>
+        </header>
+
+        <main>
+            <div class="gallery-container">
+                <button class="nav-btn prev-btn" id="prevBtn">❮</button>
+                
+                <div class="side-photo-wrapper">
+                    <div class="side-photo-container side-photo-left">
+                        <img src="images/photo18.jpg" alt="Önceki Fotoğraf" class="side-photo" id="prevPhoto">
+                    </div>
+                </div>
+                
+                <div class="photo-wrapper">
+                    <div class="photo-container">
+                        <img src="images/photo1.jpg" alt="Fotoğraf 1" class="photo" id="currentPhoto">
+                        <div class="photo-overlay">
+                            <button class="zoom-btn" id="zoomBtn">🔍</button>
+                        </div>
+                    </div>
+                    <p class="photo-description" id="photoDescription">
+                        21 Nisan 2025. İlk buluşmamız, sana ilk defa uzun uzun sarılmıştım. O günkü heyecanımı, mutluluğumu dün gibi hatırlıyorum.
+                    </p>
+                </div>
+
+                <div class="side-photo-wrapper">
+                    <div class="side-photo-container side-photo-right">
+                        <img src="images/photo2.jpg" alt="Sonraki Fotoğraf" class="side-photo" id="nextPhoto">
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" id="nextBtn">❯</button>
+            </div>
+
+            <div class="photo-indicators" id="indicators"></div>
+        </main>
+
+        <div class="countdown-section">
+            <div class="countdown" id="countdown">
+                <div class="time-unit">
+                    <span class="number" id="years">0</span>
+                    <span class="label">Yıl</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="months">0</span>
+                    <span class="label">Ay</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="days">0</span>
+                    <span class="label">Gün</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="hours">0</span>
+                    <span class="label">Saat</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="minutes">0</span>
+                    <span class="label">Dakika</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="seconds">0</span>
+                    <span class="label">Saniye</span>
+                </div>
+            </div>
+            <p class="subtitle">21 Nisan 2025, Gece 12:30'dan beri birlikteyiz</p>
+        </div>
+    </div>
+
+    <!-- Modal for enlarged photo -->
+    <div class="modal" id="modal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <p class="modal-description" id="modalDescription"></p>
+        <button class="modal-nav prev-modal" id="prevModal">❮</button>
+        <button class="modal-nav next-modal" id="nextModal">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
